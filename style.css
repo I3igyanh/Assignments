@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    line-height: 2;
+   
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    background: #f9f9f9;
+    color: #333;
+    margin: auto;
+    background: linear-gradient(to right, rgb(254, 240, 138), rgb(187, 247, 208), rgb(34, 197, 94));
+    
+}
+
+.site-header {
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #333;
+    background: linear-gradient(to right, rgb(153, 246, 228), rgb(217, 249, 157))
+}
+
+.site-title {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.assignment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.week-tag {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #555;
+    font: playfair display, serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.assignment-list a {
+    text-decoration: none;
+    color: #333;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+   }
+
+.assignment-list a:hover {
+    background: linear-gradient(to right, rgb(217, 70, 239), rgb(220, 38, 38), rgb(251, 146, 60));
+    transition: 1s ease-in;
+}

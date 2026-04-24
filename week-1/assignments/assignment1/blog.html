@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assignment 1 — Semantic HTML Blog | Week 1</title>
+  <link rel="stylesheet" href="blog.css" />
+</head>
+
+<body>
+
+  <header>
+    <h1>My Blog</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Articles</a>
+      <a href="#">Projects</a>
+      <a href="#">About</a>
+    </nav>
+  </header>
+  <main>
+    <div class="layout">
+      <article>
+
+        <p><time datetime="2026-04-24">April 24, 2026</time> · By Bigyan</p>
+
+        <h2>Semantic HTML </h2>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam animi consequatur corrupti quis quisquam
+          cupiditate incidunt, quo aut voluptas et.
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, sed.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, molestiae.
+          Quia saepe molestiae illo error repellat optio in doloribus. Quae?
+          Perspiciatis, animi magni iusto distinctio rerum officiis tempora ratione debitis.
+        </p>
+
+        <blockquote>
+          <p>"semantic HTML assignment."</p>
+          <cite>-Bigyan</cite>
+        </blockquote>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus praesentium maiores officia voluptatum
+          doloribus tenetur?
+          Ad pariatur, iste et atque rem, esse sint facere velit facilis illum, neque mollitia magnam.
+          Officia quasi nulla, eius dolore voluptatum eum quae cupiditate beatae, error maiores provident repudiandae
+          adipisci.
+          Eum magnam soluta vel ducimus asperiores tempore quod, odio, neque, perspiciatis obcaecati consequatur autem
+          nihil.
+          Ea sapiente, totam, blanditiis unde iste necessitatibus eum culpa nisi corrupti aliquid distinctio officia et!
+        </p>
+
+        VIDEO — Q2 Challenge
+        <h3>▶ Watch: Semantic Structure in Practice</h3>
+
+        <div class="media-block">
+          <video controls width="320">
+            <source src="semantic-html-explainer.mp4" type="video/mp4" />
+            Your browser does not support the video element.
+          </video>
+          <p class="media-caption">Fig 1. — A walkthrough of semantic HTML structure. <em>(Add a .mp4 source file to
+              display video.)</em></p>
+          </video>
+        </div>
+
+        <div class="dev-note">
+          <h4>Why is video tag placed inside article tag?</h4>
+          <p>
+            video tag element is embedded directly inside the article tag because it is content-specific —
+            it illustrates and extends the article's argument about semantic HTML. A video placed in a header tag or
+            aside tag would imply it
+            belongs to the whole site or is supplementary material.
+            Here, the video is part of the article's editorial body, making article tag the correct semantic parent.
+          </p>
+        </div>
+
+        <h3>Listen: The Semantic HTML Podcast Clip</h3>
+
+        <div class="media-block">
+          <audio controls>
+            <!--
+              In a live project, add sources here:
+              <source src="semantic-html-podcast.mp3" type="audio/mpeg" />
+            -->
+            <p>Your browser does not support the audio element.</p>
+          </audio>
+          <p class="media-caption">A podcast clip on semantic HTML</p>
+        </div>
+
+        <div class="dev-note">
+          <h4>Why is audio tag placed inside article tag?</h4>
+          <p>
+            The audio tag clip is a companion to this specific article — a podcast recording that covers the same topic.
+            Because its meaning is inseparable from the article's context, it belongs inside article tag rather than in
+            a global
+            header tag. If a user shares just this article, the audio should travel with it.
+            Placing media inside article tag preserves that relationship and correctly signals to crawlers and assistive
+            technology that
+            the media is editorial content, not decorative or navigational.
+          </p>
+        </div>
+      </article>
+      <aside>
+        <h3>Sidebar: related content and tags</h3>
+
+        <h3>Related Articles</h3>
+        <ul>
+          <li><a href="#">HTML Forms: Best Practices</a></li>
+          <li><a href="#">CSS Grid vs Flexbox: When to Use Each</a></li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+  <footer>
+    <p>© 2026 Bigyan, Assignment 1</p>
+  </footer>
+
+</body>
+
+</html>
