@@ -21,14 +21,47 @@
   <div>
     <h2>Designed for learners</h2>
     <p>Write one paragraph about your product.</p>
-    <button>Buy Now</button>
+    <button><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Buy now</a></button>
   </div>
 </section>
 
 <section class="image-fit-lab">
-  <div class="fit-cover">cover</div>
-  <div class="fit-contain">contain</div>
-  <div class="fit-fill">fill</div>
-</section>
+    <h2>Object-fit Comparison</h2>
+    <p>All the three boxes below have the same dimension and are the same image</p>
+ 
+    <div class="fit-boxes">
+ 
+      <div class="fit-box fit-cover">
+        <span class="label">cover</span>
+        <img
+          src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop"
+          alt="object-fit cover example"
+        />
+        
+        <p>Fills the box completely. Image is cropped if needed. Aspect ratio is preserved.</p>
+      </div>
+ 
+      <div class="fit-box fit-contain">
+        <span class="label">contain</span>
+        <img
+          src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop"
+          alt="object-fit contain example"
+        />
+        
+        <p>The whole image fits inside the box. Gaps appear on the sides or top/bottom. Aspect ratio is preserved.</p>
+      </div>
+ 
+      <div class="fit-box fit-fill">
+        <span class="label">fill</span>
+        <img
+          src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop"
+          alt="object-fit fill example"
+        />
+        
+        <p>Stretches the image to fill the box exactly. Aspect ratio is <em>not</em> preserved — image distorts.</p>
+      </div>
+ 
+    </div>
+  </section>
 </body>
 </html>
