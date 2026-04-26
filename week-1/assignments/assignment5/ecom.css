@@ -11,7 +11,6 @@
         min-height: 100vh;
     }
 
-    /* ── Q1: Page Grid with named areas ── */
     .shop-layout {
         display: grid;
         grid-template-areas:
@@ -24,7 +23,6 @@
         gap: 0;
     }
 
-    /* Header */
     .shop-header {
         grid-area: header;
         background: #222;
@@ -54,7 +52,6 @@
         color: #fff;
     }
 
-    /* Sidebar */
     .shop-sidebar {
         grid-area: sidebar;
         background: #fff;
@@ -81,9 +78,9 @@
         cursor: pointer;
     }
     
-    /* removes the border from last item */
+    
     .shop-sidebar ul li:last-child {  
-        border-bottom: none;
+        border-bottom: none;  /* border last item hataune*/
     }
 
     .shop-sidebar ul li:hover {
@@ -95,7 +92,6 @@
         margin-top: 8px;
     }
 
-    /* Main */
     .shop-main {
         grid-area: main;
         padding: 24px;
@@ -107,7 +103,6 @@
         color: #444;
     }
 
-    /* Product card grid inside main */
     .product-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -159,7 +154,6 @@
     }
 
 
-    /* Mobile breakpoint*/
     @media (max-width: 650px) {
         .shop-layout {
             grid-template-areas:
