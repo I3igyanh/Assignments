@@ -1,0 +1,187 @@
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: sans-serif;
+        color: #222;
+        background: #f5f5f5;
+        min-height: 100vh;
+    }
+
+    /* ── Q1: Page Grid with named areas ── */
+    .shop-layout {
+        display: grid;
+        grid-template-areas:
+            "header  header"
+            "sidebar main"
+            "footer  footer";
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: auto 1fr auto;
+        min-height: 100vh;
+        gap: 0;
+    }
+
+    /* Header */
+    .shop-header {
+        grid-area: header;
+        background: #222;
+        color: #fff;
+        padding: 16px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .shop-header h1 {
+        font-size: 1.3rem;
+    }
+
+    .shop-header nav {
+        display: flex;
+        gap: 20px;
+    }
+
+    .shop-header nav a {
+        color: #ccc;
+        text-decoration: none;
+        font-size: 0.88rem;
+    }
+
+    .shop-header nav a:hover {
+        color: #fff;
+    }
+
+    /* Sidebar */
+    .shop-sidebar {
+        grid-area: sidebar;
+        background: #fff;
+        border-right: 1px solid #ddd;
+        padding: 20px 16px;
+    }
+
+    .shop-sidebar h2 {
+        font-size: 0.75rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: #888;
+        margin-bottom: 14px;
+    }
+
+    .shop-sidebar ul {
+        list-style: none;
+    }
+
+    .shop-sidebar ul li {
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+        font-size: 0.88rem;
+        cursor: pointer;
+    }
+    
+    /* removes the border from last item */
+    .shop-sidebar ul li:last-child {  
+        border-bottom: none;
+    }
+
+    .shop-sidebar ul li:hover {
+        color: #72a6eb;
+    }
+
+    .price-range input {
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    /* Main */
+    .shop-main {
+        grid-area: main;
+        padding: 24px;
+    }
+
+    .shop-main h2 {
+        font-size: 1.1rem;
+        margin-bottom: 16px;
+        color: #444;
+    }
+
+    /* Product card grid inside main */
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+
+    .product-card {
+        background: #fff;
+        border: 1px solid #ddd;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .product-card img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .card-body {
+        padding: 14px;
+    }
+
+    .card-body h3 {
+        font-size: 0.95rem;
+        margin-bottom: 4px;
+    }
+
+    .card-body .price {
+        font-size: 0.88rem;
+        color: #2563eb;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .card-body button {
+        width: 100%;
+        background: #222;
+        color: #fff;
+        border: none;
+        padding: 8px;
+        font-size: 0.82rem;
+        cursor: pointer;
+    }
+
+    .card-body button:hover {
+        background: #444;
+    }
+
+
+    /* Mobile breakpoint*/
+    @media (max-width: 650px) {
+        .shop-layout {
+            grid-template-areas:
+                "header"
+                "sidebar"
+                "main"
+                "footer";
+            grid-template-columns: 1fr;
+        }
+
+        .shop-sidebar {
+            border-right: none;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .product-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @media (max-width: 420px) {
+        .product-grid {
+            grid-template-columns: 1fr;
+        }
+    }
