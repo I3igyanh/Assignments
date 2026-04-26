@@ -119,6 +119,12 @@ h2 {
 	font-size: 1rem;
 	color: #5a5040;
 	margin-bottom: 10px;
+	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden;
+	width: 0;
+	border-right: 2px solid #8b5e3c;
+	animation: typing-loop 6s steps(44, end) infinite, blink-caret 0.9s step-end infinite;
 }
 
 .hero-desc {
@@ -149,12 +155,44 @@ h2 {
 }
 
 .hero-photo {
-	width: 180px;
-	height: 230px;
+	width: 280px;
+	height: 360px;
 	object-fit: cover;
 	border: 1px solid #d9cfc0;
-	flex-shrink: 0;
 	display: block;
+	border-radius: 20px;
+}
+
+@keyframes typing-loop {
+	0%,
+	10% {
+		width: 0;
+	}
+	45%,
+	55% {
+		width: 44ch;
+	}
+	100% {
+		width: 0;
+	}
+}
+
+@keyframes blink-caret {
+	from,
+	to {
+		border-color: transparent;
+	}
+	50% {
+		border-color: #8b5e3c;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.hero-tagline {
+		animation: none;
+		width: auto;
+		border-right: none;
+	}
 }
 
 .hero-photo-placeholder {
@@ -167,7 +205,7 @@ h2 {
 	align-items: center;
 	justify-content: center;
 	gap: 8px;
-	flex-shrink: 0;
+	border-radius: 20px;
 }
 
 .hero-photo-placeholder span {
@@ -386,6 +424,13 @@ footer .footer-accent {
 		justify-self: center;
 	}
 
+	.hero-tagline {
+		white-space: normal;
+		width: auto;
+		border-right: none;
+		animation: none;
+	}
+
 	.timeline-item {
 		grid-template-columns: 1fr;
 		gap: 4px;
@@ -408,6 +453,11 @@ footer .footer-accent {
 }
 
 @media (min-width: 701px) and (max-width: 900px) {
+	.hero-photo {
+		width: 230px;
+		height: 300px;
+	}
+
 	.project-grid {
 		grid-template-columns: repeat(2, 1fr);
 	}
