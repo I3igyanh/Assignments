@@ -60,29 +60,31 @@ nav a:hover {
 	box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
-
+/* *slides speed */
 .slides {
 	display: flex;
-	width: 400%;
-	animation: scroll 4s ease-in-out infinite;
+	width: 300%;
+	animation: scroll 9s ease-in-out infinite;
 }
 
 .carousel:hover .slides {
-	animation-play-state: paused;
+	animation-play-state: paused;   /** animation pause garne*/
 }
 
+
 @keyframes scroll {
-	0%, 20% { transform: translateX(0); }
-	25%, 45% { transform: translateX(-25%); }
-	50%, 70% { transform: translateX(-50%); }
-	75%, 95% { transform: translateX(-75%); }
+	0%, 30% { transform: translateX(0); }
+	33%, 63% { transform: translateX(-33.333%); }
+	66%, 96% { transform: translateX(-66.666%); }
 	100% { transform: translateX(0); }
 }
 
-
+/** slide related stuff, one is above */
 .slide {
-	width: 25%;
+	width: calc(100% / 3);
 	height: 400px;
+	position: relative;
+	overflow: hidden;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
@@ -92,9 +94,10 @@ nav a:hover {
 
 .slide img {
 	position: absolute;
-	width: 100%;
-	height: 100%;
+	inset: 0;
 	object-fit: cover;
+	height: 100%;
+	width: 100%;
 }
 
 .slide-label {

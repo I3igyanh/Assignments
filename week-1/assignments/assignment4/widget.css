@@ -100,7 +100,7 @@
       font-size: 0.88rem;
       line-height: 1.6;
     }
-
+/*? the color scheme schould be changed here, maybe gradient gray*/
     .promo-right {
       justify-self: end;
       text-align: right;
@@ -111,7 +111,8 @@
       background: linear-gradient();
     }
 
-    /* loader */
+    /** loader */
+    /*? try to create a radial gradient pulsing */
     .loader-label {
       font-family: sans-serif;
       font-size: 0.85rem;

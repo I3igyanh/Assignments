@@ -1,4 +1,5 @@
-    * {
+
+   * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
@@ -11,14 +12,15 @@
         min-height: 100vh;
     }
 
+
+    /** grid area fun stuff*/
     .shop-layout {
         display: grid;
         grid-template-areas:
             "header  header"
-            "sidebar main"
-            "footer  footer";
+            "sidebar main";
         grid-template-columns: 200px 1fr;
-        grid-template-rows: auto 1fr auto;
+        grid-template-rows: auto 1fr;
         min-height: 100vh;
         gap: 0;
     }
@@ -80,16 +82,11 @@
     
     
     .shop-sidebar ul li:last-child {  
-        border-bottom: none;  /* border last item hataune*/
+        border-bottom: none;  /** border last item hataune*/
     }
 
     .shop-sidebar ul li:hover {
         color: #72a6eb;
-    }
-
-    .price-range input {
-        width: 100%;
-        margin-top: 8px;
     }
 
     .shop-main {
@@ -97,12 +94,7 @@
         padding: 24px;
     }
 
-    .shop-main h2 {
-        font-size: 1.1rem;
-        margin-bottom: 16px;
-        color: #444;
-    }
-
+    /**repeat(3, 1fr) = 1fr 1fr 1fr*/
     .product-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -116,6 +108,7 @@
         overflow: hidden;
     }
 
+    /*? the image dimension gets wonky, check in future*/
     .product-card img {
         width: 100%;
         height: 160px;
@@ -153,20 +146,31 @@
         background: #444;
     }
 
-
-    @media (max-width: 650px) {
+/** responsive design using media query */
+    @media (max-width: 700px) {
         .shop-layout {
             grid-template-areas:
                 "header"
                 "sidebar"
-                "main"
-                "footer";
+                "main";
             grid-template-columns: 1fr;
+        }
+
+        .shop-header {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .shop-header nav {
+            flex-wrap: wrap;
+            gap: 14px;
         }
 
         .shop-sidebar {
             border-right: none;
             border-bottom: 1px solid #ddd;
+            padding: 16px;
         }
 
         .product-grid {
@@ -179,3 +183,4 @@
             grid-template-columns: 1fr;
         }
     }
+/*? add a category hide feature for small screens*/
