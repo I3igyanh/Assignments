@@ -1,5 +1,5 @@
 import { Button } from '@chakra-ui/react';
-import './SearchForm.css';
+import './Searchform.css';
 
 const SearchForm = ({ city, setCity, handleSubmit }) => {
     return (

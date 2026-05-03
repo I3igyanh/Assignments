@@ -1,4 +1,5 @@
 import {Card, Heading, Stack} from '@chakra-ui/react'
+import './weathercard.css';
 
 function WeatherCard({ weather }) {
   const { name, sys, main, weather: conditions, wind, visibility } = weather
@@ -14,7 +15,7 @@ function WeatherCard({ weather }) {
           className="weather-icon"
         />
         <Card.Header>
-          <Heading size="4xl"  className="weather-city">{name}, {sys.country}</Heading>
+          <Heading size="3xl"  className="weather-city">{name}, {sys.country}</Heading>
           <Card.Body className="weather-condition">{description}</Card.Body>
         </Card.Header>
       </Card.Root>

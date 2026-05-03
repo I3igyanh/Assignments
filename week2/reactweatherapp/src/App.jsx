@@ -49,9 +49,11 @@ const App = () => {
 
 
     <div className='main-search' >
-      <SearchForm city={city} setCity={setCity} handleSubmit={handleSubmit} />
-      <StatusMessage loading={loading} error={error} />
-      {weather && <WeatherCard weather={weather} />}
+      <div className='search-cover'>
+        <SearchForm city={city} setCity={setCity} handleSubmit={handleSubmit} />
+        <StatusMessage loading={loading} error={error} />
+        {weather && <WeatherCard weather={weather} />}
+      </div>
       <Snowfall snowflakeCount={700} />
     </div>
 
