@@ -7,7 +7,7 @@ function WeatherCard({ weather }) {
 
   return (
     <Stack className="weather-result" >
-
+{/* city name and icon */}
       <Card.Root className="weather-top">
         <img
           src={`https://openweathermap.org/img/wn/${icon}@2x.png`}
@@ -19,6 +19,8 @@ function WeatherCard({ weather }) {
           <Card.Body className="weather-condition">{description}</Card.Body>
         </Card.Header>
       </Card.Root>
+
+{/* temperature, humidity, wind, visibility details */}
       <div className="weather-details">
 
         <Card.Root size="xl" className="detail-item">

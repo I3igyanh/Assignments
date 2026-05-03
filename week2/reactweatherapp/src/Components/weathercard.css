@@ -26,9 +26,19 @@
     text-align: center;
 }
 
-.weather-info {
+/* weather details */
+
+.weather-details {
     display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-around;
     padding: 1rem;
+}
+
+.detail-item{
+    background-color: #3080d1;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    color: #15181b;
 }
