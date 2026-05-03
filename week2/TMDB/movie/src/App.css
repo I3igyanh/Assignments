@@ -1,0 +1,78 @@
+.movie-container {
+    display: flex;
+    overflow-x: scroll;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 15px 0;
+    max-width: 100%;
+}
+
+body {
+    background: radial-gradient(at 50% 0%, rgb(107, 33, 168), rgb(76, 29, 149), rgb(107, 33, 168));
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: linear-gradient(to right top, rgb(17, 24, 39), rgb(8, 5, 10), rgb(124, 58, 237));
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+main {
+    padding: 30px;
+}
+
+/* search bar */
+.search-section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: rgba(64, 183, 207, 0.05);
+    border-radius: 10px;
+}
+
+.search-results {
+    margin-bottom: 50px;
+    padding: 20px 0;
+}
+
+/* movie section and below is header */
+.hot-movies,
+.high-movies,
+.upcoming-movies {
+    margin-bottom: 50px;
+    padding: 0;
+}
+
+.hot-movies h2,
+.high-movies h2,
+.upcoming-movies h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+
+/* links in the navbar */
+.links {
+    display: flex;
+    gap: 25px;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.links a:hover {
+    color: #eb993d;
+}
