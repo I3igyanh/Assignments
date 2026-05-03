@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather app</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <main class="weather-main">
+        <h1>Weather App</h1>
+        <p>Welcome to the Weather App!</p>
+
+        <label for="city-input">Enter a city:</label>
+        <input type="text" id="city-input" placeholder="kathmanndu">
+        <button id="get-weather-btn">Get Weather</button>
+
+        <div class="weather-results">
+            <p id="status" aria-live="polite">Enter a city and click search.</p>
+            <section id="weather-result" aria-live="polite">
+                <h2>City name</h2>
+
+                <img id="weather-icon" alt="weather icon" style="display: none;"/>
+
+                <p>Temperature: --</p>
+                <p>Condition: --</p>
+                <p>Humidity: --</p>
+            </section>
+            <p id="weather-info">Please enter a city and click "Get Weather" to see the weather information.</p>
+        </div>
+
+    </main>
+
+    <!-- *Advertisement Section -->
+     <!-- *TODO: add an animation to the ad -->
+
+    <div class="ad">
+        <h2>Advertisement</h2>
+        <img src="coke.webp" alt="Weather Image">
+        <p id="weather-details">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis tempora ex suscipit assumenda laborum!
+            Distinctio eius accusamus aspernatur optio!
+        </p>
+    </div>
+
+
+
+    <script src="weather.js"></script>
+</body>
+
+</html>
+<!-- todo: improve UI
+ ? for now assingment done -->
