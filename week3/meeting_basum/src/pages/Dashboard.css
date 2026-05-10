@@ -1,0 +1,49 @@
+.dashboardPage {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.greeting h1 ,.meetingTitle, .meetingHost ,.meetingTime {
+    margin: 0;
+}
+
+.cards, .meetingList {
+    display: grid;
+    gap: 1rem;
+}
+
+.cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin: 1.5rem 0 2rem;
+}
+
+.card, .meetingRow {
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(148, 163, 184, 0.16);
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+}
+
+.card, .meetingRow {
+    padding: 1.25rem;
+}
+
+.btn,.joinBtn,.viewAll {
+    border: 0;
+    border-radius: 999px;
+    padding: 0.75rem 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn,.joinBtn {
+    background: #111827;
+    color: #fff;
+}
+
+.sectionHeader,.meetingRow,.meetingLeft,.meetingRight {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}

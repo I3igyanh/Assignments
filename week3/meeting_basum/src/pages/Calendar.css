@@ -1,0 +1,14 @@
+.viewSwitcher {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.viewBtn {
+  background: rgba(255, 255, 255, 0.8);
+  color: #334155;
+}
+
+.viewBtn.active {
+  background: #111827;
+  color: #fff;
+}

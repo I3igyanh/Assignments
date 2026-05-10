@@ -1,0 +1,74 @@
+.app-shell {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        'sidebar header header'
+        'sidebar main main'
+        'sidebar footer footer';
+    background: linear-gradient(180deg, #244beb 0%, #708ae0 100%);
+    color: #0f172a;
+}
+
+/* header.jsx */
+.app-header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: rgba(255, 255, 255, 0.72);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+.header-main,.headerUser {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.bell {
+    font-size: 1.6rem;
+}
+
+
+/* sidebar  */
+.sidebar {
+    grid-area: sidebar;
+    padding: 1.25rem;
+    background: rgba(15, 23, 42, 0.96);
+    color: #fff;
+}
+
+.sidebar-title {
+    margin: 0 0 1rem;
+    font-size: 1.1rem;
+}
+
+.sidebar-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.sidebar-link {
+    display: block;
+    padding: 0.8rem 1rem;
+    border-radius: 14px;
+    color: rgba(255, 255, 255, 0.82);
+    text-decoration: none;
+}
+
+.sidebar-link.active {
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+}
+
+/* main contains outlet */
+.app-main {
+    grid-area: main;
+    padding: 1.5rem;
+}
